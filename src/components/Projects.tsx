@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 
 export const Projects: React.FC<{ projects: IProject[] }> = ({ projects }) => {
   return (
-    <div className="flex-column flex-gap-40">
+    <div className="flex-column flex-gap-40 projects">
       {projects.map((project) => (
         <ProjectCard project={project} />
       ))}

@@ -6,13 +6,22 @@ export const Navbar: React.FC<{
   isDark: boolean;
   handleIsDarkChange: (value: boolean) => void;
 }> = ({ isDark, handleIsDarkChange }) => {
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementsByClassName(id)[0];
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
+
   return (
     <div className="navbar body-width">
       <img src={ykLogo} className="logo" alt="YK logo" />
       <ul className="ul-row">
-        <li>about</li>
-        <li>projects</li>
-        <li>contact</li>
+        <li onClick={() => handleScrollTo("skills")}>skills</li>
+        <li onClick={() => handleScrollTo("projects")}>projects</li>
+        <li onClick={() => handleScrollTo("contact")}>contact</li>
         <li>
           <input
             type="checkbox"
