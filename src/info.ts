@@ -4,10 +4,6 @@ export const fetchInfo = {
   skills: [
     [
       {
-        name: "Java",
-        logo: "",
-      },
-      {
         name: "JavaScript",
         logo: "",
       },
@@ -19,6 +15,22 @@ export const fetchInfo = {
         name: "Python",
         logo: "",
       },
+      {
+        name: "Java",
+        logo: "",
+      },
+      {
+        name: "C++",
+        logo: "",
+      },
+      {
+        name: "HTML5",
+        logo: "",
+      },
+      {
+        name: "CSS3",
+        logo: "",
+      },
     ],
     [
       {
@@ -26,17 +38,161 @@ export const fetchInfo = {
         logo: "fa-brands fa-react",
       },
       {
+        name: "AngularJS",
+        logo: "",
+      },
+      {
         name: "Redux",
+        logo: "",
+      },
+      {
+        name: "Redux Toolkit",
+        logo: "",
+      },
+      {
+        name: "React DnD",
+        logo: "",
+      },
+      {
+        name: "Styled-Component",
+        logo: "",
+      },
+      {
+        name: "Web APIs",
         logo: "",
       },
     ],
     [
       {
+        name: "RESTful APIs",
+        logo: "",
+      },
+      {
+        name: "Axios",
+        logo: "",
+      },
+      {
+        name: "Postman",
+        logo: "",
+      },
+      {
+        name: "Zod",
+        logo: "",
+      },
+      {
+        name: "GraphQL",
+        logo: "",
+      },
+      {
+        name: "Webpack",
+        logo: "",
+      },
+      {
+        name: "Vite",
+        logo: "",
+      },
+    ],
+    [
+      {
+        name: "Node.js",
+        logo: "",
+      },
+      {
+        name: "Express",
+        logo: "",
+      },
+      {
+        name: "Spring",
+        logo: "",
+      },
+      {
+        name: "AWS",
+        logo: "",
+      },
+      {
+        name: "AWS Elastic Beanstalk",
+        logo: "",
+      },
+      {
+        name: "AWS EC2",
+        logo: "",
+      },
+    ],
+    [
+      {
+        name: "MongoDB",
+        logo: "",
+      },
+      {
+        name: "MySQL",
+        logo: "",
+      },
+      {
+        name: "PostgreSQL",
+        logo: "",
+      },
+      {
+        name: "Redis",
+        logo: "",
+      },
+      {
+        name: "RDBMS",
+        logo: "",
+      },
+      {
+        name: "AWS RDS",
+        logo: "",
+      },
+      {
+        name: "AWS S3",
+        logo: "",
+      },
+    ],
+    [
+      {
+        name: "Git",
+        logo: "",
+      },
+      {
+        name: "GitHub",
+        logo: "",
+      },
+      {
         name: "Docker",
         logo: "",
       },
       {
+        name: "Travis CI",
+        logo: "",
+      },
+      {
         name: "CI/CD",
+        logo: "",
+      },
+      {
+        name: "Electron",
+        logo: "",
+      },
+    ],
+    [
+      {
+        name: "Jest",
+        logo: "",
+      },
+      {
+        name: "Cypress",
+        logo: "",
+      },
+      {
+        name: "Jasmine",
+        logo: "",
+      },
+      {
+        name: "Puppeteer",
+        logo: "",
+      },
+      {
+        name: "Jest",
         logo: "",
       },
     ],
