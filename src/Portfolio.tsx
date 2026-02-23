@@ -9,39 +9,15 @@ import {
 } from "./components";
 import { fetchInfo } from "./info";
 import "./Portfolio.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faSquareJs,
-  faReact,
-  faGithub,
-  faLinkedin,
-  faJava,
-  faPython,
-  faNodeJs,
-  faGithubAlt,
-} from "@fortawesome/free-brands-svg-icons";
-import { faPencil, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
-
-library.add(
-  faSquareJs,
-  faReact,
-  faGithub,
-  faLinkedin,
-  faJava,
-  faPython,
-  faNodeJs,
-  faPencil,
-  faCirclePlay,
-  faGithubAlt
-);
 
 export const Portfolio: React.FC = () => {
   const info = fetchInfo;
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState<boolean>(() =>
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    if (mediaQuery.matches) setIsDark(true);
     const handleChange = (e: MediaQueryListEvent) => setIsDark(e.matches);
     mediaQuery.addEventListener("change", handleChange);
 
@@ -60,7 +36,11 @@ export const Portfolio: React.FC = () => {
       <Navbar isDark={isDark} handleIsDarkChange={handleIsDarkChange} />
       <div className="main-container flex-column flex-gap-40">
         <About isDark={isDark} />
-        <Skills skills={info.skills} />
+        <Skills
+          skills={info.skills}
+          skillGroupTitles={info.skillGroupTitles}
+          profileLinks={info.profileLinks}
+        />
         <Projects projects={info.projects} />
         <Contact contact={info.contact} />
       </div>

@@ -12,15 +12,29 @@ export const About: React.FC<{ isDark: boolean }> = ({ isDark }) => {
           style={{ opacity: isDark ? 1 : 0 }}
         />
       </div>
-      <p>
-        Welcome to my page! I'm Yeunha, a full-stack software engineer with
-        extensive experience in developing scalable SaaS applications. My
-        professional journey has honed my ability to manage complex projects
-        with shifting priorities, always ensuring robust solutions and
-        maintainable code. As a committed team player, I excel in fostering
-        communication and collaboration to drive success. Thank you for
-        visiting!
-      </p>
+      <div className="flex-column">
+        <p>
+          Hey there! I&apos;m Yeunha Kim, a software engineer based in Los
+          Angeles. I&apos;m all about building thoughtful software, solving
+          complex problems, and shipping products that are reliable in the real
+          world. I love working on agentic AI systems and turning messy
+          workflows into clear, usable experiences, with a strong focus on
+          safety and ethical use of AI in real-world systems.
+        </p>
+        <div className="about-education">
+          <p>Education</p>
+          <p>
+            M.S. in Computer Science, GPA 4.0 - Georgia Institute of Technology
+            (exp. 2027)
+          </p>
+          <p>
+            M.S. in Chemical Engineering - University of California, Los Angeles
+          </p>
+          <p>
+            B.S. in Chemical Engineering - University of California, Los Angeles
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

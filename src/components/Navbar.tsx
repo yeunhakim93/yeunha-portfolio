@@ -21,7 +21,6 @@ export const Navbar: React.FC<{
       <ul className="ul-row">
         <li onClick={() => handleScrollTo("skills")}>skills</li>
         <li onClick={() => handleScrollTo("projects")}>projects</li>
-        <li onClick={() => handleScrollTo("contact")}>contact</li>
         <li>
           <input
             type="checkbox"

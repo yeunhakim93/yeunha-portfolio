@@ -1,36 +1,53 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { ISkill } from "../types";
+import { IProfileLink, ISkill } from "../types";
 import { Tag } from "./Tag";
 
-export const Skills: React.FC<{ skills: ISkill[][] }> = ({ skills }) => {
-  return (
-    <div className="skills">
-      {skills.map((skillColumns) => (
-        <div className="container card flex-column">
-          {skillColumns.map((skill) => (
+export const Skills: React.FC<{
+  skills: ISkill[][];
+  skillGroupTitles: string[];
+  profileLinks: IProfileLink[];
+}> = ({ skills, skillGroupTitles, profileLinks }) => {
+  const renderSkillGroup = (skillGroup: ISkill[] | undefined, index: number) => {
+    if (!skillGroup) return null;
+
+    return (
+          <div
+            className="skills-group container card flex-column"
+            key={skillGroupTitles[index] ?? index}
+          >
+        <h3>{skillGroupTitles[index] ?? "Technical Focus"}</h3>
+        <div className="skills-tags">
+          {skillGroup.map((skill) => (
             <Tag
+              key={skill.name}
               text={skill.name}
-              icon={`fa-brands fa-${skill.logo}` as IconProp}
+              icon={skill.icon}
+              iconImageSrc={skill.iconImageSrc}
             />
           ))}
         </div>
-      ))}
-      <div className="container card flex-column">
-        <a href="https://github.com/yeunhakim93/" target="_blank">
-          <Tag
-            text="GitHub"
-            icon={"fa-brands fa-github-alt" as IconProp}
-            variant="link"
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/yeunhakim93/" target="_blank">
-          <Tag
-            text={"LinkedIn"}
-            icon={"fa-brands fa-linkedin" as IconProp}
-            variant="link"
-          />
-        </a>
       </div>
-    </div>
+    );
+  };
+
+  return (
+    <section className="skills">
+      <div className="skills-grid">
+        {renderSkillGroup(skills[0], 0)}
+        <div className="skills-group container card flex-column">
+          <h3>Profiles</h3>
+          <div className="skills-links">
+            {profileLinks.map((link) => (
+              <a href={link.href} key={link.text} target="_blank" rel="noreferrer">
+                <Tag text={link.text} icon={link.icon} variant="link" />
+              </a>
+            ))}
+          </div>
+        </div>
+        {renderSkillGroup(skills[1], 1)}
+        {renderSkillGroup(skills[2], 2)}
+        {renderSkillGroup(skills[3], 3)}
+        {renderSkillGroup(skills[4], 4)}
+      </div>
+    </section>
   );
 };

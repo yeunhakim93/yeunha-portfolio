@@ -173,6 +173,19 @@ a .tag-link {
   outline: 0.5px solid gray;
 }
 
+.tag-icon-mask {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: currentColor;
+  display: block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 /* Navbar */
 .navbar {
   padding: 16px 0;
@@ -277,12 +290,45 @@ a .tag-link {
   transition-duration: 0.5s;
 }
 
+.about-education {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.about-education p:first-child {
+  font-weight: 700;
+}
+
 /* Skills */
 .skills {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
   font-family: monospace;
+  margin: 12px 0 24px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skills-group h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 /* Projects */
@@ -321,10 +367,8 @@ a .tag-link {
     align-items: center;
     gap: 8px;
   }
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 

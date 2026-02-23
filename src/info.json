@@ -1,0 +1,57 @@
+{
+  "skills": [
+    [
+      { "name": "TypeScript" },
+      { "name": "Python" },
+      { "name": "Java" },
+      { "name": "C++" }
+    ],
+    [
+      { "name": "RAG (LlamaIndex)" },
+      { "name": "Multi-step Agent Workflows" },
+      { "name": "Structured Tool Execution" },
+      { "name": "Pinecone" },
+      { "name": "LiteLLM" },
+      { "name": "Vercel AI SDK" },
+      { "name": "MCP Servers" }
+    ],
+    [
+      { "name": "Node.js" },
+      { "name": "Express" },
+      { "name": "REST APIs" },
+      { "name": "PostgreSQL" },
+      { "name": "MySQL" },
+      { "name": "MongoDB" },
+      { "name": "Redis Streams" },
+      { "name": "RabbitMQ" },
+      { "name": "Docker" },
+      { "name": "Kubernetes" }
+    ],
+    [
+      { "name": "React" },
+      { "name": "Redux" },
+      { "name": "TanStack Query" },
+      { "name": "Browser APIs" },
+      { "name": "WYSIWYG Editor Development" }
+    ],
+    [
+      { "name": "SAML" },
+      { "name": "OIDC" },
+      { "name": "JIT Provisioning" },
+      { "name": "RBAC" },
+      { "name": "Multi-tenant Authorization" }
+    ]
+  ],
+  "projects": [
+    {
+      "title": "Solid Tic-Tac-Toe",
+      "year": "2022",
+      "thumbnail": "/solid-tic-tac-toe.png",
+      "description": "Solid Tic-Tac-Toe, built with Solid.js, offers users a classic game experience with a responsive interface. This project was created to explore and showcase the capabilities of the Solid.js framework.",
+      "stacks": ["Solid.js", "Jest", "Vite"],
+      "github": "https://github.com/yeunhakim93/solid-tic-tac-toe",
+      "demo": "https://yeunhakim93.github.io/solid-tic-tac-toe/"
+    }
+  ],
+  "contact": "yeunhakim93 at gmail dot com"
+}

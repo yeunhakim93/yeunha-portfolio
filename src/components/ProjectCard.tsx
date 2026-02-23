@@ -1,5 +1,5 @@
-import { type IconProp } from "@fortawesome/fontawesome-svg-core";
 import { IProject } from "../types";
+import { projectActionIcons } from "../info";
 import { Tag } from "./";
 
 export const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
@@ -17,37 +17,26 @@ export const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
         <ul className="ul-row flex-gap-8  flex-wrap">
           {project.stacks.map((stack) => (
             <li>
-              <Tag
-                text={stack}
-                icon={`fa-brands fa-${stack.toLowerCase()}` as IconProp}
-              />
+              <Tag text={stack} />
             </li>
           ))}
         </ul>
         <div className="flex-gap-8">
           {project.blog && (
             <a href={project.blog} target="_blank">
-              <Tag
-                text="Blog"
-                icon={"fa-solid fa-pencil" as IconProp}
-                variant="link"
-              />
+              <Tag text="Blog" icon={projectActionIcons.blog} variant="link" />
             </a>
           )}
           {project.demo && (
             <a href={project.demo} target="_blank">
-              <Tag
-                text="Demo"
-                icon={"fa-solid fa-circle-play" as IconProp}
-                variant="link"
-              />
+              <Tag text="Demo" icon={projectActionIcons.demo} variant="link" />
             </a>
           )}
           {project.github && (
             <a href={project.github} target="_blank">
               <Tag
                 text="GitHub"
-                icon={"fa-brands fa-github-alt" as IconProp}
+                icon={projectActionIcons.github}
                 variant="link"
               />
             </a>
